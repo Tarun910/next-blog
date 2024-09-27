@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Typed from "typed.js";
 import React, { useRef, useEffect } from "react";
+import Image from "next/image"; // Import the Image component
 
 export default function Home() {
   // Create reference to store the DOM element containing the animation
@@ -10,11 +11,11 @@ export default function Home() {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Coding",
-        "Web Development",
-        "Software Engineering",
-        "Data Science",
-        "Machine Learning",
+        'Coding',
+        'Web Development',
+        'Software Engineering',
+        'Data Science',
+        'Machine Learning',
       ],
       typeSpeed: 50,
       backSpeed: 50,
@@ -53,10 +54,12 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full mt-4 lg:mt-0 lg:w-1/2">
-          <img
+          <Image
             src="https://www.creative-tim.com/twcomponents/svg/website-designer-bro-purple.svg"
             alt="tailwind css components"
             className="w-full h-full max-w-md mx-auto"
+            width={500} // Add width prop
+            height={500} // Add height prop
           />
         </div>
       </section>
@@ -189,8 +192,7 @@ export default function Home() {
             <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
               <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 transform transition duration-500 hover:scale-105 text-center">
                 <p className="text-gray-600 dark:text-gray-400">
-                  "This service has been a game-changer for our business. Highly
-                  recommend!"
+                  &quot;This service has been a game-changer for our business. Highly recommend!&quot;
                 </p>
                 <h3 className="mt-4 text-xl font-semibold text-gray-800 dark:text-gray-200">
                   John Doe
@@ -204,14 +206,13 @@ export default function Home() {
             <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
               <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 transform transition duration-500 hover:scale-105 text-center">
                 <p className="text-gray-600 dark:text-gray-400">
-                  "Amazing experience! The team was professional and the results
-                  were outstanding."
+                  &quot;Fantastic support and great features. Couldn't ask for more!&quot;
                 </p>
                 <h3 className="mt-4 text-xl font-semibold text-gray-800 dark:text-gray-200">
                   Jane Smith
                 </h3>
                 <p className="text-gray-500 dark:text-gray-300">
-                  Marketing Director, Company B
+                  CTO, Company B
                 </p>
               </div>
             </div>
@@ -219,14 +220,13 @@ export default function Home() {
             <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
               <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 transform transition duration-500 hover:scale-105 text-center">
                 <p className="text-gray-600 dark:text-gray-400">
-                  "The level of support we received was fantastic. Couldn't ask
-                  for more!"
+                  &quot;Incredible value for money and very user-friendly!&quot;
                 </p>
                 <h3 className="mt-4 text-xl font-semibold text-gray-800 dark:text-gray-200">
-                  Mark Wilson
+                  Sarah Connor
                 </h3>
                 <p className="text-gray-500 dark:text-gray-300">
-                  CTO, Company C
+                  Manager, Company C
                 </p>
               </div>
             </div>
