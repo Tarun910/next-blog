@@ -4,6 +4,7 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Image from "next/image"; // Import Image from next/image
 
 const Blog = async () => {
   // Fetch blog data from the file system (server-side)
@@ -33,10 +34,12 @@ const Blog = async () => {
             key={index}
             className="rounded-lg shadow-md overflow-hidden dark:border-2"
           >
-            {/* Blog post image */}
-            <img
+            {/* Blog post image using Next.js Image component */}
+            <Image
               src={blog.image}
               alt={blog.title}
+              width={500} // Adjust as necessary
+              height={300} // Adjust as necessary
               className="w-full h-64 object-cover"
             />
 
